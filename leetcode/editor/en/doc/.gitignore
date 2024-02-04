@@ -1,2 +1,6 @@
-# Default ignored files
-/submission/
+# Ignore anything
+/*
+!.gitignore
+
+# Except for the content directory
+!/content/
