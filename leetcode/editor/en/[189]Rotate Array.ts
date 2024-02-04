@@ -6,18 +6,12 @@
 function rotate(nums: number[], k: number): void {
     const length = nums.length
 
-    while (k) {
-        if (k >= length) {
-            k -= length
-            continue
-        }
+    k %= length
 
-        nums.splice(
-            0,
-            0,
-            ...nums.splice(length - k, k)
-        )
-        break;
-    }
+    nums.splice(
+        0,
+        0,
+        ...nums.splice(length - k, k)
+    )
 };
 //leetcode submit region end(Prohibit modification and deletion)
