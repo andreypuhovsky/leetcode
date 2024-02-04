@@ -11,5 +11,6 @@ class Solution(object):
         if x < 10:
             return True
 
-        return str(x) == str(x)[::-1]
+        str_x = str(x)
+        return str_x == str_x[::-1]
 # leetcode submit region end(Prohibit modification and deletion)
