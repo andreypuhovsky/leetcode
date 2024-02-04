@@ -23,7 +23,7 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
 
     // Loop through the lists until both are null and there is no overflow
     while (currentL1 || currentL2 || overflow) {
-        let prenumber =
+        const prenumber =
             (currentL1?.val || 0) +
             (currentL2?.val || 0) +
             (overflow ? 1 : 0)
@@ -31,7 +31,7 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
         overflow = false
 
         // If the number is 10 or more, we need to set the overflow to the next number
-        let number = prenumber % 10
+        const number = prenumber % 10
         if (number !== prenumber) {
             overflow = true
         }
